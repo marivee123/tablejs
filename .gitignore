@@ -1,0 +1,150 @@
+$(function () {
+    
+    //Employees JSON Object, use the template below to create the JSON object to store Employee information
+    var Employees = [
+        {
+            "Name": "Greg Howell",
+            "EmailAddress": "ghowell3@gsu.edu",
+            "Title": "Associate Director",
+            "Expertise": "Government",
+            "PhoneNumber": "404-413-3543",
+        },
+        {
+            "Name": "Joseph Mcleod",
+            "EmailAddress": "jmcleod@gsu.edu",
+            "Title": "Senior Institutional Officer",
+            "Expertise": "Government",
+            "PhoneNumber": "404-413-3501",
+        },
+        {
+            "Name": "Katie Pope",
+            "EmailAddress": "kpope11@gsu.edu",
+            "Title": "Senior Institutional Officer",
+            "Expertise": "Government",
+            "PhoneNumber": "404-413-3526",
+        },
+        {
+            "Name": "Jill Borland",
+            "EmailAddress": "jborland@gsu.edu",
+            "Title": "Associate Director",
+            "Expertise": "DHHS",
+            "PhoneNumber": "404-413-3570",
+        },
+        {
+            "Name": "Curtis Bonner",
+            "EmailAddress": "cbonner@gsu.edu",
+            "Title": "Managing Financial Officer",
+            "Expertise": "DHHS",
+            "PhoneNumber": "404-413-3534",
+        },
+        {
+            "Name": "Latoya Brown",
+            "EmailAddress": "lbrown123@gsu.edu",
+            "Title": "Senior Associate Institutional Officer",
+            "Expertise": "DHHS",
+            "PhoneNumber": "404-413-3527",
+        },
+        {
+            "Name": "John Teal",
+            "EmailAddress": "jteal@gsu.edu",
+            "Title": "Senior Institutional Officer",
+            "Expertise": "DHHS",
+            "PhoneNumber": "404-413-3531",
+        },
+        {
+            "Name": "Michael Mathieson",
+            "EmailAddress": "mmathieson@gsu.edu",
+            "Title": "Associate Director",
+            "Expertise": "Federal Sub-Awards",
+            "PhoneNumber": "404-413-3523",
+        },
+        {
+            "Name": "Teja Singh",
+            "EmailAddress": "tsingh2@gsu.edu",
+            "Title": "Managing Financial Officer",
+            "Expertise": "Federal Sub-Awards",
+            "PhoneNumber": "404-413-3520",
+        },
+        {
+            "Name": "Tulani Murphy",
+            "EmailAddress": "tmurphy30@gsu.edu",
+            "Title": "Senior Institutional Officer",
+            "Expertise": "Federal Sub-Awards",
+            "PhoneNumber": "404-413-3571",
+        },
+        {
+            "Name": "Amin Hassan",
+            "EmailAddress": "ahassan14@gsu.edu",
+            "Title": "Senior Associate Financial Officer",
+            "Expertise": "Federal Sub-Awards",
+            "PhoneNumber": "404-413-3519",
+        },
+        {
+            "Name": "Margaret Matkins",
+            "EmailAddress": "mmatkins@gsu.edu",
+            "Title": "Associate Director",
+            "Expertise": "Not For Profit",
+            "PhoneNumber": "404-413-3604",
+        },
+        {
+            "Name": "Patricia O'Malley'",
+            "EmailAddress": "pomalley@gsu.edu",
+            "Title": "Senior Associate Financial Officer",
+            "Expertise": "Not For Profit",
+            "PhoneNumber": "404-413-3533",
+        },
+        {
+            "Name": "Lawrence Mkondya",
+            "EmailAddress": "lmkondya@gsu.edu",
+            "Title": "Senior Institutional Officer",
+            "Expertise": "Not For Profit",
+            "PhoneNumber": "404-413-3509",
+        },
+        {
+            "Name": "Rita Alexander",
+            "EmailAddress": "ralexander@gsu.edu",
+            "Title": "Senior Associate Financial Officer",
+            "Expertise": "Not For Profit",
+            "PhoneNumber": "404-413-3521",
+        },
+        {
+            "Name": "Ken Packman",
+            "EmailAddress": "kpackman@gsu.edu",
+            "Title": "Director",
+            "Expertise": "General",
+            "PhoneNumber": "404-413-3550",
+        },
+        {
+            "Name": "Tony Burnett",
+            "EmailAddress": "barnardanthony2@gsu.edu",
+            "Title": "Associate Financial Officer",
+            "Expertise": "General",
+            "PhoneNumber": "404-413-3564",
+        },
+        {
+            "Name": "Izaura Kertesz",
+            "EmailAddress": "ikertesz@gsu.edu",
+            "Title": "Associate Institutional Officer",
+            "Expertise": "General",
+            "PhoneNumber": "404-413-3663",
+        },
+        {
+            "Name": "Faith Koch",
+            "EmailAddress": "fkoch@gsu.edu",
+            "Title": "Administrative Assistant",
+            "Expertise": "General",
+            "PhoneNumber": "404-413-3502",
+        },
+    ];
+
+    //The table is created but you need to add the header and then use a for loop to add each table row for each employee
+    $("#pager").append("<table id='employeelist' class='table'></table>");
+    $("#employeelist").append("<tr><th>Name</th><th>Email Address</th><th>Title</th><th>Expertise</th><th>Phone Number</th></tr>");
+
+    //Insert for loop here to write each table row
+    for(var i = 0; i < Employees.length; i++) {
+     var employee = Employees[i];
+    $("#employeelist").append("<tr><td>" + employee.Name + "</td><td>" + employee.EmailAddress + "</td><td>" + employee.Title + "</td><td>" + employee.Expertise + "</td><td>" + employee.PhoneNumber + "</td></tr>"); 
+    }
+
+});
